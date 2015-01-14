@@ -14,17 +14,7 @@ public class MusicManager : MonoBehaviour {
 	public static void makeAppear(string name){
 		AudioSource sound;
 		if (musicParts.TryGetValue (name, out sound))
-			sound.volume = 1;
+			sound.volume = .70f;
 		else Debug.Log("Unknown music part "+name);
-	}
-	void Update(){
-		/*
-		if (Input.GetKeyDown (KeyCode.F1))
-			makeAppear ("String");
-		else if (Input.GetKeyDown (KeyCode.F2))
-			makeAppear ("Piano");
-		else if (Input.GetKeyDown (KeyCode.F3))
-			makeAppear ("Vibrato");
-		*/
 	}
 }
