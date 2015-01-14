@@ -15,9 +15,9 @@ public class LightControl : MonoBehaviour {
 			Vector3 character = GameObject.Find ("Character").transform.position;
 			Vector3 light = gameObject.transform.position;
 			character.z = light.z = -1;
-			if(Vector3.Distance(character,light) < 3f){
+			if(Vector3.Distance(character,light) < 4f){
 				bool nohit = true;
-				RaycastHit[] hits = Physics.RaycastAll (character, light-character, 2f); // Cast a ray between the character and the light
+				RaycastHit[] hits = Physics.RaycastAll (character, light-character, 4f); // Cast a ray between the character and the light
 				foreach (RaycastHit hit in hits)
 					if(hit.collider.gameObject.name == "Wall"
 				    || hit.collider.gameObject.name == "Door") // If it hit something
